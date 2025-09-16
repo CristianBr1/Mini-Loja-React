@@ -1,0 +1,96 @@
+@import './variables.css';
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 97%;
+  background-color: var(--color-bg);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  transition: background-color var(--transition), box-shadow var(--transition);
+  z-index: 50;
+}
+
+.navbar.dark {
+  box-shadow: var(--shadow-card);
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  border: none;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.product-grid {
+  display: grid;
+  gap: 1rem;
+  padding: 5rem 1rem 1rem; /* top padding para navbar fixa */
+}
+
+@media (max-width: 480px) {
+  .product-grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1025px) {
+  .product-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.product-card {
+  background-color: var(--color-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.product-card.dark {
+  box-shadow: var(--shadow-card-dark);
+}
+
+.skeleton {
+  background-color: #e5e7eb;
+  border-radius: var(--radius);
+  aspect-ratio: 1/1;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+

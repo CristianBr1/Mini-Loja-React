@@ -1,0 +1,26 @@
+/* src/styles/variables.css */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111827;
+  --color-primary: #3b82f6;
+  --color-secondary: #f59e0b;
+  --shadow-card: 0 2px 8px rgba(0,0,0,0.1);
+  --shadow-card-dark: 0 2px 8px rgba(255,255,255,0.1);
+  --radius: 0.5rem;
+  --transition: 0.2s;
+}
+
+.dark {
+  --color-bg: #1f2937;
+  --color-text: #f9fafb;
+  --shadow-card: 0 2px 8px rgba(255,255,255,0.1);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.2s, color 0.2s;
+}

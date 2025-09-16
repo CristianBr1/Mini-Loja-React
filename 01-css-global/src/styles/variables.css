@@ -1,0 +1,18 @@
+:root {
+  --color-bg: #ffffff;
+  --color-bg-dark: #1f2937;
+  --color-text: #111827;
+  --color-text-dark: #f9fafb;
+  --color-primary: #3b82f6;
+  --color-secondary: #f59e0b;
+  --shadow-card: 0 2px 8px rgba(0,0,0,0.1);
+  --shadow-card-dark: 0 2px 8px rgba(255,255,255,0.1);
+  --radius: 0.5rem;
+  --transition: 0.2s;
+}
+
+.dark {
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-dark);
+  --shadow-card: var(--shadow-card-dark);
+}
